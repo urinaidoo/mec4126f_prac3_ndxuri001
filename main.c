@@ -12,13 +12,13 @@
 
 // GLOBAL VARIABLES ----------------------------------------------------------|
 struct age_data {
-	uint8_t day;
-	uint8_t month;
-	uint16_t year;
-	uint8_t age;
+	uint8_t day; // date of month
+	uint8_t month; // month number
+	uint16_t year; // year of birth
+	uint8_t age; // current age
 };
 
-struct age_data my_age;
+struct age_data my_age; // global variable of struct 
 
 // FUNCTION DECLARATIONS -----------------------------------------------------|
 
@@ -28,7 +28,8 @@ struct age_data my_age;
 void main(void)
 {
 	init_LCD();
-	my_age.day = 17;
+	// instance of struct with personal birth date details created:
+	my_age.day = 17; 
 	my_age.month = 11;
 	my_age.year = 2001;
 	my_age.age = 21;
@@ -36,7 +37,8 @@ void main(void)
 
 
 	while(1)
-	{
+	{ 
+		// looped counter on LCD screen of my age
 		int i;
 		int age_int = my_age.age;
 		for(i = 0;i<=age_int;++i){
